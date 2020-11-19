@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.rangafarm.pos.controller.DashBordFormEmployeeController">
+   <children>
+      <AnchorPane layoutX="198.0" prefHeight="39.0" prefWidth="1168.0" style="-fx-background-color: #3F51B5;" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="21.0" fitWidth="28.0" layoutX="6.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/triangleArrow.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="23.0" fitWidth="31.0" layoutX="49.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/flagSl.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblDate" layoutX="94.0" layoutY="10.0" prefHeight="18.0" prefWidth="384.0" text="Sat 15 Sep" textFill="#ecf0f1">
+               <font>
+                  <Font name="FreeSans Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" layoutX="1043.0" layoutY="11.0" prefHeight="18.0" prefWidth="103.0" text="23:39:18" textFill="#ecf0f1">
+               <font>
+                  <Font name="FreeSans Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="39.0" prefWidth="200.0" style="-fx-background-color: #303F9F;">
+         <children>
+            <Label layoutX="47.0" layoutY="11.0" prefHeight="18.0" prefWidth="115.0" text="EMPLOYEE" textFill="#ecf0f1">
+               <font>
+                  <Font name="FreeSans Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="23.0" fitWidth="31.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/account.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutY="39.0" prefHeight="101.0" prefWidth="200.0" style="-fx-background-color: #1A237E;">
+         <children>
+            <Label layoutX="54.0" layoutY="30.0" prefHeight="39.0" prefWidth="137.0" text="Ranga Egg Farm" textFill="#ecf0f1">
+               <font>
+                  <Font name="FreeSans Bold" size="17.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+            <ImageView fitHeight="39.0" fitWidth="40.0" layoutX="7.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/titlePc.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="50.0" layoutY="67.0" opacity="0.29" prefHeight="0.0" prefWidth="137.0" />
+         </children>
+      </AnchorPane>
+      <VBox layoutY="140.0" prefHeight="560.0" prefWidth="200.0" style="-fx-background-color: #010328;" AnchorPane.bottomAnchor="0.0">
+         <children>
+            <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" onAction="#btnDashboardOnAction" prefHeight="48.0" prefWidth="205.0" ripplerFill="WHITE" text="DASHBOARD" textFill="#c5cae9">
+               <font>
+                  <Font name="FreeSans" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/dashboard.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </JFXButton>
+            <Separator opacity="0.19" prefHeight="3.0" prefWidth="109.0" />
+            <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="10.0" layoutY="10.0" onAction="#btnEggCleanOnAction" prefHeight="48.0" prefWidth="205.0" ripplerFill="WHITE" text="EGG CLEAN" textFill="#c5cae9">
+               <font>
+                  <Font name="FreeSans" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/eggClean.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="10.0" layoutY="58.0" onAction="#btnSellingOnAction" prefHeight="48.0" prefWidth="205.0" ripplerFill="WHITE" text="SELLING" textFill="#c5cae9">
+               <font>
+                  <Font name="FreeSans" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/sell.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="10.0" layoutY="106.0" onAction="#btnAddEggOnAction" prefHeight="48.0" prefWidth="205.0" ripplerFill="WHITE" text="EGGS" textFill="#c5cae9">
+               <font>
+                  <Font name="FreeSans" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/addEgg.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="10.0" layoutY="154.0" onAction="#btnAddFoodOnAction" prefHeight="48.0" prefWidth="205.0" ripplerFill="WHITE" text="FOODS" textFill="#c5cae9">
+               <font>
+                  <Font name="FreeSans" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/addFood.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="10.0" layoutY="202.0" onAction="#btnCageOnAction" prefHeight="48.0" prefWidth="205.0" ripplerFill="WHITE" text="CAGE" textFill="#c5cae9">
+               <font>
+                  <Font name="FreeSans" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/cage.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="10.0" layoutY="250.0" onAction="#btnCustomerOnAction" prefHeight="48.0" prefWidth="205.0" ripplerFill="WHITE" text="CUSTOMER" textFill="#c5cae9">
+               <font>
+                  <Font name="FreeSans" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/customer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="10.0" layoutY="346.0" onAction="#btnEmployeeOnAction" prefHeight="48.0" prefWidth="205.0" ripplerFill="WHITE" text="EMPLOYEES" textFill="#c5cae9">
+               <font>
+                  <Font name="FreeSans" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/employee.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="10.0" layoutY="394.0" onAction="#btnAttendanceOnAction" prefHeight="48.0" prefWidth="205.0" ripplerFill="WHITE" text="ATTENDANCE" textFill="#c5cae9">
+               <font>
+                  <Font name="FreeSans" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/attendence.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="10.0" layoutY="298.0" onAction="#btnReportOnAction" prefHeight="48.0" prefWidth="205.0" ripplerFill="WHITE" text="SETTING" textFill="#c5cae9">
+               <font>
+                  <Font name="FreeSans" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/setting.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </VBox>
+      <Label fx:id="lblFormName" layoutX="217.0" layoutY="50.0" prefHeight="21.0" prefWidth="200.0" text="Dashbord">
+         <font>
+            <Font name="FreeSans Bold" size="16.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="root" layoutX="204.0" layoutY="145.0" prefHeight="550.0" prefWidth="1158.0" style="-fx-background-color: white;">
+         <children>
+            <Separator layoutX="-4.0" layoutY="1.0" orientation="VERTICAL" prefHeight="553.0" prefWidth="5.0" style="-fx-background-color: black;" />
+            <AnchorPane layoutX="14.0" layoutY="22.0" prefHeight="159.0" prefWidth="294.0" style="-fx-background-color: #3949AB;">
+               <children>
+                  <Label fx:id="lblTotCustomer" layoutX="95.0" layoutY="67.0" text="21" textFill="WHITE">
+                     <font>
+                        <Font name="FreeSans Bold" size="48.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="46.0" layoutY="13.0" prefHeight="39.0" prefWidth="200.0" text="Total Customers" textFill="WHITE">
+                     <font>
+                        <Font name="FreeSans Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="386.0" layoutY="22.0" prefHeight="159.0" prefWidth="294.0" style="-fx-background-color: #F44336;">
+               <children>
+                  <Label fx:id="lblTotHens" layoutX="78.0" layoutY="61.0" text="5900" textFill="WHITE">
+                     <font>
+                        <Font name="FreeSans Bold" size="48.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="73.0" layoutY="13.0" prefHeight="39.0" prefWidth="137.0" text="Total Hens" textFill="WHITE">
+                     <font>
+                        <Font name="FreeSans Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="117.0" fitWidth="137.0" layoutX="161.0" layoutY="25.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/hen.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="791.0" layoutY="22.0" prefHeight="159.0" prefWidth="294.0" style="-fx-background-color: #FF9800;">
+               <children>
+                  <ImageView fitHeight="109.0" fitWidth="115.0" layoutX="168.0" layoutY="27.0" opacity="0.37" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/eggs.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblTotEggs" layoutX="124.0" layoutY="69.0" text="452" textFill="WHITE">
+                     <font>
+                        <Font name="FreeSans Bold" size="48.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="80.0" layoutY="13.0" prefHeight="39.0" prefWidth="137.0" text="Total Eggs" textFill="WHITE">
+                     <font>
+                        <Font name="FreeSans Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="109.0" fitWidth="115.0" layoutX="174.0" layoutY="56.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/custLabel.png" />
+               </image>
+            </ImageView>
+            <LineChart fx:id="chart" layoutX="14.0" layoutY="202.0" prefHeight="338.0" prefWidth="1074.0" style="-fx-background-color: WHITE; -fx-background-radius: 10;" title="MONTHLY EGGS SELLING RATE">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" fx:id="x" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="y" side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <ImageView fitHeight="28.0" fitWidth="39.0" layoutX="968.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <Separator layoutX="216.0" layoutY="139.0" prefHeight="3.0" prefWidth="1145.0" style="-fx-background-color: black;" />
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="216.0" layoutY="71.0" onAction="#calcOnAction" prefHeight="69.0" prefWidth="86.0" text="Calculater">
+         <graphic>
+            <ImageView fitHeight="39.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/calculator.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="320.0" layoutY="75.0" prefHeight="69.0" prefWidth="117.0" text="Orders Report">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/order.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1270.0" layoutY="97.0" onAction="#btnLogOutOnAction" style="-fx-background-color: #3F51B5;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="FreeSans Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

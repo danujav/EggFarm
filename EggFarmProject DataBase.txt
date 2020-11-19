@@ -1,0 +1,175 @@
+DROP DATABASE IF EXISTS EggFarm;
+CREATE DATABASE EggFarm;
+USE EggFarm;
+
+CREATE TABLE Customer(
+		custId VARCHAR(10) NOT NULL,
+		name VARCHAR(50) NOT NULL,
+		shopName VARCHAR(50),
+		address VARCHAR(50) NOT NULL,
+		mobileNumber INT NOT NULL,
+		CONSTRAINT PRIMARY KEY(custId),
+		CONSTRAINT name_address UNIQUE(name,address)
+);
+
+CREATE TABLE Orders(
+		orderId VARCHAR(10) NOT NULL,
+		custId VARCHAR(10) NOT NULL,
+		orderDate VARCHAR(20) NOT NULL,
+		orderTime VARCHAR(20) NOT NULL,
+		CONSTRAINT PRIMARY KEY(orderId),
+		CONSTRAINT FOREIGN KEY (custId) REFERENCES Customer(custId)
+		ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE Product(
+		productId VARCHAR(10) NOT NULL,
+		description VARCHAR(50) NOT NULL,
+		unitprice  DOUBLE(10, 2) NOT NULL,
+		qtyOnHand INT NOT NULL,
+		CONSTRAINT PRIMARY KEY(productId)
+);
+
+CREATE TABLE OrderDetail(
+		orderId VARCHAR(10) NOT NULL,
+		productId VARCHAR(10) NOT NULL,
+		qty INT NOT NULL,
+		CONSTRAINT FOREIGN KEY (orderId) REFERENCES Orders(orderId)
+		ON DELETE CASCADE ON UPDATE CASCADE,
+		CONSTRAINT FOREIGN KEY (productId) REFERENCES Product(productId)
+		ON DELETE CASCADE ON UPDATE CASCADE
+		
+);
+
+CREATE TABLE Cage(
+		cageId VARCHAR(10) NOT NULL,
+		noOfHen INT NOT NULL,
+		qtyOnFood VARCHAR(10) NOT NULL,
+		qtyOnVitamin VARCHAR(10) NOT NULL,
+		CONSTRAINT PRIMARY KEY(cageId)
+);
+
+CREATE TABLE Employee(
+		empId VARCHAR(10) NOT NULL,
+		name VARCHAR(50) NOT NULL,
+		address VARCHAR(50) NOT NULL,
+		mobileNumber INT NOT NULL,
+		registryDate DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+		CONSTRAINT PRIMARY KEY(empId)
+		
+);
+
+CREATE TABLE EggBucket(
+		eggBucketId VARCHAR(10) NOT NULL,
+		cageId VARCHAR(10) NOT NULL,
+		empId VARCHAR(10) NOT NULL,
+		dates DATE NOT NULL,
+		times VARCHAR(20) NOT NULL,
+		qty INT NOT NULL,
+		CONSTRAINT PRIMARY KEY(eggBucketId),
+		CONSTRAINT FOREIGN KEY (cageId) REFERENCES Cage(cageId)
+		ON DELETE CASCADE ON UPDATE CASCADE,
+		CONSTRAINT FOREIGN KEY (empId) REFERENCES Employee(empId)
+		ON DELETE CASCADE ON UPDATE CASCADE
+		
+);
+
+CREATE TABLE EggBucketDetail(
+		eggBucketId VARCHAR(10) NOT NULL,
+		productId VARCHAR(10) NOT NULL,
+		qty INT NOT NULL,
+		CONSTRAINT FOREIGN KEY (eggBucketId) REFERENCES EggBucket(eggBucketId)
+		ON DELETE CASCADE ON UPDATE CASCADE,
+		CONSTRAINT FOREIGN KEY (productId) REFERENCES Product(productId)
+		ON DELETE CASCADE ON UPDATE CASCADE
+		
+);
+
+
+
+CREATE TABLE Attendance(
+		empId VARCHAR(10) NOT NULL,
+		Dates VARCHAR(25) NOT NULL,
+		checkIn VARCHAR(25) NOT NULL,
+		checkOut VARCHAR(25) NOT NULL,
+		workingHour VARCHAR(25) NOT NULL,
+		CONSTRAINT FOREIGN KEY (empId) REFERENCES Employee(empId)
+		ON DELETE CASCADE ON UPDATE CASCADE,
+		CONSTRAINT empId_Dates UNIQUE(empId,Dates)
+);
+
+CREATE TABLE Users(
+	userName VARCHAR(20) NOT NULL,
+	name VARCHAR(45) NOT NULL,
+	email VARCHAR(30) NOT NULL,
+	password VARCHAR(500) NOT NULL,
+	roleType VARCHAR(20) NOT NULL,
+	CONSTRAINT PRIMARY KEY(userName,email),
+	CONSTRAINT userName_email UNIQUE(userName,email)
+);
+
+
+ALTER TABLE EggBucket
+MODIFY COLUMN times VARCHAR(20);
+base64 -> password reset
+
+create table temp(
+	name varchar(500),
+	password varchar(500)
+);
+
+insert into temp(name, password) values('danuja', md5('abc'));
+
+insert into temp(name, password) values('deshan', md5('123'));
+
+SELECT * FROM temp WHERE password = md5('abc');
+
+SELECT * FROM temp WHERE password = md5('123');
+
+INSERT INTO Users VALUES(?, ?, ?, md5(?), ?);
+);
+
+
+select * from Users where userName = 'danuvdeshan' && password = md5('deshan1234');
+
+
+select * from Users where userName = 'dadnuvdeshan' || email = 'danujagreruv@gmail.com'&& password = md5('deshan1234');
+
+
+
+
+
+select * from Users where userName = 'danu'  &&  password = md5('12345678');
+
+
+
+ select * from Users where (userName = 'danu' || email = 'danu' )  &&  password = md5('12345678d');
+
+
+SELECT custId,productId,qty,orderDate,orderTime FROM Orders INNER JOIN OrderDetail ON Orders.orderId = OrderDetail.orderId
+ WHERE MONTH(orderDate)  = MONTH(curdate());
+
+SELECT custId,productId,qty,orderDate,orderTime FROM Orders INNER JOIN OrderDetail ON Orders.orderId = OrderDetail.orderId GROUP BY YEAR(orderDate), MONTH(orderDate), 
+ DATENAME(MONTH, orderDate)
+ORDER BY 1,2;
+
+ ORDER BY YEAR(orderDate), MONTH(orderDate) GROUP BY YEAR(orderDate), MONTH(orderDate); 
+
+
+
+
+SELECT YEAR(orderDate) [Year], MONTH(orderDate) [Month], 
+ DATENAME(MONTH,orderDate) [Month Name], COUNT(1) [Sales Count]
+FROM #Sales
+GROUP BY YEAR(orderDate), MONTH(orderDate), 
+ DATENAME(MONTH, orderDate)
+ORDER BY 1,2
+
+SELECT orderId, description,qty,unitprice FROM OrderDetail INNER JOIN Product ON OrderDetail.productId = Product.productId;
+
+
+
+
+INSERT INTO Users VALUES('danu', 'Danuja', 'danujagreru@gmail.com', md5(12345678), 'Owner');
+
+

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainRoot" prefHeight="700.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.rangafarm.pos.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1366.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/loginBackground.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="root" layoutX="207.0" layoutY="67.0" prefHeight="584.0" prefWidth="942.0" style="-fx-background-color: white;">
+         <children>
+            <JFXButton buttonType="RAISED" layoutY="528.0" onAction="#left" prefHeight="44.0" prefWidth="79.0" text=".">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/loginBack.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <AnchorPane layoutX="471.0" prefHeight="584.0" prefWidth="467.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <JFXButton buttonType="RAISED" layoutX="88.0" layoutY="381.0" onAction="#btnLogInOnAction" prefHeight="44.0" prefWidth="306.0" style="-fx-background-color: #2B45EA;" text="Log In" textFill="WHITE">
+                     <font>
+                        <Font name="FreeSans Bold" size="24.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="140.0" layoutY="453.0" opacity="0.63" text="Don't have an account?">
+                     <font>
+                        <Font name="FreeSans" size="13.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink layoutX="273.0" layoutY="449.0" onAction="#right" text="Sign Up" />
+                  <TextField fx:id="txtLogUserName" layoutX="88.0" layoutY="188.0" prefHeight="44.0" prefWidth="306.0" />
+                  <PasswordField fx:id="txtLogPassword" layoutX="88.0" layoutY="289.0" prefHeight="44.0" prefWidth="306.0" />
+                  <Separator layoutX="48.0" layoutY="136.0" orientation="VERTICAL" prefHeight="370.0" prefWidth="2.0" />
+                  <Separator layoutX="430.0" layoutY="136.0" orientation="VERTICAL" prefHeight="370.0" prefWidth="2.0" />
+                  <Separator layoutX="49.0" layoutY="135.0" prefHeight="3.0" prefWidth="383.0" />
+                  <Separator layoutX="132.0" layoutY="442.0" prefWidth="200.0" />
+                  <Label layoutX="88.0" layoutY="164.0" opacity="0.73" text="User Name">
+                     <font>
+                        <Font name="FreeSans" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="88.0" layoutY="267.0" opacity="0.73" text="Password">
+                     <font>
+                        <Font name="FreeSans" size="13.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="49.0" layoutY="505.0" prefHeight="3.0" prefWidth="383.0" />
+                  <ImageView fitHeight="64.0" fitWidth="92.0" layoutX="192.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/loginpic.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="40.0" layoutY="21.0" text="Sign Up">
+               <font>
+                  <Font name="FreeSans Bold" size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="80.0" text="Please fill your information below">
+               <font>
+                  <Font name="FreeSans" size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="18.0" layoutY="106.0" prefHeight="0.0" prefWidth="437.0" />
+            <JFXTextField fx:id="txtUserName" labelFloat="true" layoutX="94.0" layoutY="128.0" prefHeight="26.0" prefWidth="295.0" promptText="User Name">
+               <font>
+                  <Font name="FreeSans" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtName" labelFloat="true" layoutX="94.0" layoutY="183.0" prefHeight="26.0" prefWidth="295.0" promptText="Name">
+               <font>
+                  <Font name="FreeSans" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtEmailAddress" labelFloat="true" layoutX="94.0" layoutY="245.0" prefHeight="26.0" prefWidth="295.0" promptText="Email Address">
+               <font>
+                  <Font name="FreeSans" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton buttonType="RAISED" layoutX="91.0" layoutY="481.0" onAction="#btnSignUpOnAction" prefHeight="44.0" prefWidth="295.0" ripplerFill="WHITE" style="-fx-background-color: #3498db;" text="Sign Up" textFill="WHITE">
+               <font>
+                  <Font name="FreeSans Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXPasswordField fx:id="txtPassword" labelFloat="true" layoutX="91.0" layoutY="311.0" prefHeight="26.0" prefWidth="295.0" promptText="Password" />
+            <Label layoutX="94.0" layoutY="345.0" opacity="0.57" text="(use least 8 or more characters)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="txtRePassword" labelFloat="true" layoutX="89.0" layoutY="384.0" prefHeight="26.0" prefWidth="295.0" promptText="Re-Password" />
+            <RadioButton fx:id="radioAcceptBtn" layoutX="80.0" layoutY="452.0" mnemonicParsing="false" opacity="0.65" text="I Accept">
+               <font>
+                  <Font name="FreeSans" size="12.0" />
+               </font>
+            </RadioButton>
+            <Hyperlink layoutX="144.0" layoutY="448.0" onAction="#termAndConditionOnAction" text="terms and conditons">
+               <font>
+                  <Font name="FreeSans" size="13.0" />
+               </font>
+            </Hyperlink>
+            <Label layoutX="269.0" layoutY="452.0" opacity="0.65" text="&amp; privacy policy">
+               <font>
+                  <Font name="FreeSans" size="12.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="anchorPane" prefHeight="584.0" prefWidth="467.0">
+               <children>
+                  <ImageView fitHeight="584.0" fitWidth="492.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../asserts/loginBackground.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="17.0" layoutY="150.0" text="Welcome to" textFill="WHITE">
+                     <font>
+                        <Font name="FreeSans" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="210.0" layoutY="150.0" text="RANGA FARM" textFill="WHITE">
+                     <font>
+                        <Font name="FreeSans Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="23.0" layoutY="214.0" prefHeight="3.0" prefWidth="417.0" />
+                  <Label layoutX="19.0" layoutY="267.0" text="Be active, be faithful to your own job. Get correct knowloedge what " textFill="WHITE" />
+                  <Label layoutX="19.0" layoutY="284.0" text="actually you doing here right now" textFill="WHITE" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="152.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/loginformKey.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="79.0" fitWidth="115.0" layoutX="182.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/loginHen.png" />
+                     </image>
+                  </ImageView>
+                  <Hyperlink layoutX="14.0" layoutY="308.0" onAction="#hyperLearnMoreOnAction" text="Learn more..." textFill="WHITE">
+                     <font>
+                        <Font name="FreeSans" size="13.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

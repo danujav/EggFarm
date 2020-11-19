@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="1158.0" style="-fx-background-color: #E0E0E0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.rangafarm.pos.controller.AttendanceFormController">
+   <children>
+      <AnchorPane layoutX="9.0" layoutY="8.0" prefHeight="535.0" prefWidth="909.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane layoutX="7.0" layoutY="6.0" prefHeight="50.0" prefWidth="895.0" style="-fx-background-color: #E8EAF6;">
+               <children>
+                  <JFXComboBox fx:id="cmbEmployeeId" labelFloat="true" layoutX="16.0" layoutY="12.0" onAction="#cmbEmployeeIdOnAction" prefHeight="26.0" prefWidth="227.0" promptText="EMPLOYEE ID" />
+                  <JFXButton buttonType="RAISED" layoutX="265.0" layoutY="15.0" onAction="#btnCheckAttendance" style="-fx-background-color: lightgreen;" text="Check Attendance">
+                     <font>
+                        <Font name="FreeSans Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="622.0" layoutY="10.0" onAction="#btnCheckIn" prefHeight="32.0" prefWidth="74.0" style="-fx-background-color: #536DFE;" text="Check In" textFill="WHITE">
+                     <font>
+                        <Font name="FreeSans Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="707.0" layoutY="10.0" onAction="#btnCheckOut" prefHeight="32.0" prefWidth="85.0" style="-fx-background-color: #536DFE;" text="Check Out" textFill="WHITE">
+                     <font>
+                        <Font name="FreeSans Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="802.0" layoutY="10.0" onAction="#btnAbsent" prefHeight="32.0" prefWidth="85.0" style="-fx-background-color: #FF5252;" text="Absent" textFill="WHITE">
+                     <font>
+                        <Font name="FreeSans Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <TableView fx:id="tblAttendance" layoutX="16.0" layoutY="115.0" prefHeight="374.0" prefWidth="873.0">
+              <columns>
+                <TableColumn fx:id="colDate" prefWidth="264.0" text="Date" />
+                <TableColumn fx:id="colCheckIn" prefWidth="228.0" text="Check In" />
+                  <TableColumn fx:id="colCheckOut" prefWidth="183.0" text="Check Out" />
+                  <TableColumn fx:id="colWorkingHour" prefWidth="197.0" text="Working Hours" />
+              </columns>
+            </TableView>
+            <AnchorPane layoutX="63.0" layoutY="58.0" prefHeight="55.0" prefWidth="798.0" style="-fx-background-color: #E8EAF6;">
+               <children>
+                  <Label fx:id="lblEmployeeName" layoutX="292.0" layoutY="-1.0" prefHeight="55.0" prefWidth="491.0" textFill="#141313">
+                     <font>
+                        <Font name="FreeSans Bold" size="48.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="43.0" fitWidth="62.0" layoutX="36.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/employeea.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </AnchorPane>
+      <AnchorPane layoutX="925.0" layoutY="9.0" prefHeight="232.0" prefWidth="227.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #4DB6AC;">
+               <children>
+                  <Label layoutX="18.0" layoutY="22.0" text="Absent Employees" textFill="WHITE">
+                     <font>
+                        <Font name="FreeSans Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblAbsentEmployees" layoutX="71.0" layoutY="70.0" text="02" textFill="WHITE">
+                     <font>
+                        <Font name="DejaVuMathTeXGyre-Regular" size="48.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

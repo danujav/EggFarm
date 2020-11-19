@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.14.0.final using JasperReports Library version 6.14.0-2ab0d8625be255bf609c78e1181801213e51db8f  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Bill" language="javascript" pageWidth="360" pageHeight="570" columnWidth="320" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="57e79361-d5d6-4b9b-8e83-b806f83006d1">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="netTot" class="java.lang.String"/>
+	<parameter name="cash" class="java.lang.String"/>
+	<parameter name="exchangingCost" class="java.lang.String"/>
+	<parameter name="itemCount" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT orderId, description,qty,unitprice,(qty * unitprice) AS totalPrice FROM OrderDetail INNER JOIN Product ON OrderDetail.productId = Product.productId WHERE orderId = (SELECT orderId FROM OrderDetail ORDER BY orderId DESC LIMIT 1)]]>
+	</queryString>
+	<field name="orderId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="orderId"/>
+		<property name="com.jaspersoft.studio.field.label" value="orderId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="OrderDetail"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="description" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="description"/>
+		<property name="com.jaspersoft.studio.field.label" value="description"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Product"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="qty" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="qty"/>
+		<property name="com.jaspersoft.studio.field.label" value="qty"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="OrderDetail"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="unitprice" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="unitprice"/>
+		<property name="com.jaspersoft.studio.field.label" value="unitprice"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Product"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="totalPrice" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="totalPrice"/>
+		<property name="com.jaspersoft.studio.field.label" value="totalPrice"/>
+	</field>
+	<group name="orderId">
+		<groupExpression><![CDATA[$F{orderId}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="82" y="-1" width="134" height="30" uuid="fdd6ca9f-6fbc-4eac-b77b-9c379952e385"/>
+				<textElement>
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ranga Farm]]></text>
+			</staticText>
+			<image>
+				<reportElement x="6" y="17" width="50" height="50" uuid="4ed1e6f3-056f-4acd-b849-12e10f778180"/>
+				<imageExpression><![CDATA["/home/danu/IdeaProjects/EggFarm/src/lk/rangafarm/pos/asserts/hen.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="175" y="40" width="182" height="30" uuid="a3f23fef-7ff5-47bf-8af1-b76c3384788f"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[රුවන්පුර මාවත, අම්බලන්ගොඩ පාර, කරණ්දෙනිය]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="96" splitType="Stretch">
+			<staticText>
+				<reportElement x="39" y="3" width="159" height="17" uuid="b59e3698-70fb-40e7-8553-a16e7991934e"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[බිත්තර සහ කුකුල් කෑම]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="17" width="212" height="30" uuid="c4bdf21a-0919-48dd-b200-4fb6f1d24486"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ තොග සහ සිල්ලර වෙලෙන්දෝ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="87" y="41" width="127" height="15" uuid="70142f19-aa23-461f-9e26-ac0e9549260f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[දුක: 075-6122196
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="60" width="100" height="12" uuid="c38c4c04-1f31-4b76-b5a2-2598b4ed0c92"/>
+				<text><![CDATA[බිල්පත් අංකය:
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="78" width="100" height="12" uuid="ee176151-6a22-4693-a98b-b637af37926a"/>
+				<text><![CDATA[දිනය/වේලාව:]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="85" y="77" width="123" height="13" uuid="87b2a5cf-d4b7-40de-9fbe-cfb778d04c53"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="276" y="78" width="113" height="12" uuid="daa0e6ad-01e9-4286-87d8-515a1bc68363"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="85" y="59" width="100" height="13" uuid="55a3fd10-d587-45d2-97f5-a4b812c559c1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{orderId}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="54" splitType="Stretch">
+			<line>
+				<reportElement x="2" y="46" width="318" height="1" uuid="9f73b7c6-a35e-4095-bf75-2adacda2f7bb"/>
+			</line>
+			<staticText>
+				<reportElement x="262" y="27" width="52" height="24" uuid="37717699-328a-43d3-8d5e-8ec356924afc"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[මිල]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="28" width="52" height="24" uuid="58e52f45-4251-4755-8258-fe98f20fb0a5"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Kg/Pcs]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="27" width="81" height="22" uuid="040a8d1f-2778-470e-b976-efa3344b3adf"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[ඒකකයක මිල:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="10" width="80" height="20" uuid="7fab3a55-36b9-424e-b5b2-1bf6662b4440"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[භාණ්ඩ වර්ගය:]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="1" y="2" width="100" height="22" uuid="e9331bf3-af78-4e1e-a2af-a8b18a7e438f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dacf4c66-78b3-42ff-9484-8605e0c974c7"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FreeSans" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="26" y="20" width="100" height="24" uuid="b4846e8e-ff86-4e67-a908-b8e47339fe15">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="86f001b0-236c-4435-a93f-e19b868abfb1"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FreeSans" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{unitprice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="153" y="20" width="100" height="24" uuid="9e811339-6c62-418a-ac14-e3b104b6c1cb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9a824507-3f23-46eb-b42b-2be97f1bcde5"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FreeSans" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="265" y="21" width="100" height="23" uuid="38632735-7571-4860-9eae-45e1226b23d0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aa616b96-1ba5-4556-aa15-2b032925e56e"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FreeSans" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalPrice}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="142" splitType="Stretch">
+			<staticText>
+				<reportElement x="28" y="8" width="100" height="30" uuid="de04d545-9b7b-407d-9fbf-76989c5c7e29"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[මුලු එකතුව:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="178" y="3" width="140" height="30" uuid="c49eea8c-59a5-4c21-bb39-df1ee8934e68"/>
+				<textElement>
+					<font size="22" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{netTot}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="91" y="43" width="59" height="21" uuid="1c2b9008-4be7-4e0e-9366-0f21d5b66d7d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[මුදල්:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="88" y="59" width="59" height="21" uuid="9e8fb103-644d-4203-b6f2-415fdcb01911"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ඉතුරු:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="42" width="100" height="22" uuid="961c6de2-d042-4725-bd3d-396cbc0eefb8"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cash}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="63" width="154" height="17" uuid="d82fae0e-abb2-4d0f-86cd-88e544af1dd0"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{exchangingCost}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="18" y="84" width="129" height="30" uuid="a174b1c2-5369-4247-a618-83f77070ea1c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[මුළු භාණ්ඩ ගණන:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="181" y="84" width="141" height="19" uuid="d62bcdce-96a7-4477-ba75-c99eb35d1fb5"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{itemCount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="105" y="127" width="108" height="15" uuid="9deb9e71-e8b6-48a6-b3ef-bfba77b2aef0"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[නැවත එන්න]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="122" y="107" width="69" height="20" uuid="117c16b3-fd10-4174-9722-99176520dc47"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ස්තූතියි]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

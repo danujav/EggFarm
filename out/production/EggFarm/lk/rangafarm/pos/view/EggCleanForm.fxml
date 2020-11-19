@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="1158.0" style="-fx-background-color: #E0E0E0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.rangafarm.pos.controller.EggCleanFormController">
+    <children>
+        <AnchorPane layoutX="9.0" layoutY="8.0" prefHeight="535.0" prefWidth="909.0" style="-fx-background-color: white;">
+            <children>
+                <Label layoutX="24.0" layoutY="35.0" prefHeight="46.0" prefWidth="111.0" text="Cage Name">
+                    <font>
+                        <Font name="FreeSans Bold" size="18.0" />
+                    </font>
+                </Label>
+                <JFXComboBox fx:id="cmbCage" labelFloat="true" layoutX="196.0" layoutY="45.0" prefHeight="26.0" prefWidth="181.0" promptText="SELECT CAGE" />
+                <Label layoutX="447.0" layoutY="35.0" prefHeight="46.0" prefWidth="145.0" text="Employee Id">
+                    <font>
+                        <Font name="FreeSans Bold" size="18.0" />
+                    </font>
+                </Label>
+                <JFXComboBox fx:id="cmbEmpName" labelFloat="true" layoutX="636.0" layoutY="45.0" prefHeight="26.0" prefWidth="181.0" promptText="SELECT ID" />
+                <Label layoutX="24.0" layoutY="115.0" prefHeight="46.0" prefWidth="145.0" text="Bucket Id">
+                    <font>
+                        <Font name="FreeSans Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="447.0" layoutY="115.0" prefHeight="46.0" prefWidth="97.0" text="Time">
+                    <font>
+                        <Font name="FreeSans Bold" size="18.0" />
+                    </font>
+                </Label>
+                <JFXComboBox fx:id="cmbTime" labelFloat="true" layoutX="636.0" layoutY="125.0" prefHeight="26.0" prefWidth="181.0" promptText="SELECT TIME" />
+                <Label layoutX="24.0" layoutY="192.0" prefHeight="46.0" prefWidth="145.0" text="Egg Qty">
+                    <font>
+                        <Font name="FreeSans Bold" size="18.0" />
+                    </font>
+                </Label>
+                <JFXButton buttonType="RAISED" layoutX="322.0" layoutY="261.0" onAction="#btnKeepOnAction" prefHeight="46.0" prefWidth="218.0" style="-fx-background-color: #536DFE;" text="Keep">
+                    <font>
+                        <Font name="FreeSans Bold" size="24.0" />
+                    </font>
+                </JFXButton>
+                <Separator layoutX="429.0" layoutY="21.0" orientation="VERTICAL" prefHeight="218.0" prefWidth="4.0" />
+                <AnchorPane layoutX="12.0" layoutY="420.0" prefHeight="101.0" prefWidth="151.0" style="-fx-background-color: #3949AB;">
+                    <children>
+                        <Label layoutX="43.0" layoutY="14.0" text="7.30am" textFill="WHITE">
+                            <font>
+                                <Font name="FreeSans Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblSevenEgg" layoutX="56.0" layoutY="55.0" text="150" textFill="WHITE">
+                            <font>
+                                <Font name="FreeSans Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="171.0" layoutY="420.0" prefHeight="101.0" prefWidth="200.0" style="-fx-background-color: #424242;">
+                    <children>
+                        <Label layoutX="62.0" layoutY="12.0" text="10.30am" textFill="WHITE">
+                            <font>
+                                <Font name="FreeSans Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblTenEgg" layoutX="82.0" layoutY="51.0" text="94" textFill="WHITE">
+                            <font>
+                                <Font name="FreeSans Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="539.0" layoutY="420.0" prefHeight="101.0" prefWidth="200.0" style="-fx-background-color: #FF9800;">
+                    <children>
+                        <Label layoutX="58.0" layoutY="12.0" text="2.30pm" textFill="WHITE">
+                            <font>
+                                <Font name="FreeSans Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblTwoEgg" layoutX="83.0" layoutY="51.0" text="134" textFill="WHITE">
+                            <font>
+                                <Font name="FreeSans Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="379.0" layoutY="420.0" prefHeight="101.0" prefWidth="151.0" style="-fx-background-color: #009688;">
+                    <children>
+                        <Label layoutX="42.0" layoutY="12.0" text="12.30pm" textFill="WHITE">
+                            <font>
+                                <Font name="FreeSans Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblTwelveEgg" layoutX="53.0" layoutY="53.0" text="88" textFill="WHITE">
+                            <font>
+                                <Font name="FreeSans Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="747.0" layoutY="419.0" prefHeight="101.0" prefWidth="151.0" style="-fx-background-color: #8E24AA;">
+                    <children>
+                        <Label layoutX="44.0" layoutY="14.0" text="4.30am" textFill="WHITE">
+                            <font>
+                                <Font name="FreeSans Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblFourEgg" layoutX="55.0" layoutY="48.0" text="90" textFill="WHITE">
+                            <font>
+                                <Font name="FreeSans Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <Separator layoutX="11.0" layoutY="357.0" prefHeight="3.0" prefWidth="889.0" />
+                <JFXTextField fx:id="txtBucketId" layoutX="194.0" layoutY="125.0" prefHeight="26.0" prefWidth="181.0" />
+                <JFXTextField fx:id="txtEggQty" layoutX="192.0" layoutY="202.0" prefHeight="26.0" prefWidth="181.0" />
+            </children></AnchorPane>
+        <AnchorPane layoutX="925.0" layoutY="9.0" prefHeight="296.0" prefWidth="227.0" style="-fx-background-color: white;">
+            <children>
+                <Label layoutX="40.0" layoutY="8.0" prefHeight="46.0" prefWidth="145.0" text="Recently Added">
+                    <font>
+                        <Font name="FreeSans Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="14.0" layoutY="62.0" prefHeight="46.0" prefWidth="88.0" text="Cage Name">
+                    <font>
+                        <Font name="FreeSans" size="14.0" />
+                    </font>
+                </Label>
+                <Separator layoutX="8.0" layoutY="49.0" prefWidth="200.0" />
+                <Label layoutX="14.0" layoutY="107.0" prefHeight="46.0" prefWidth="104.0" text="Employee Name">
+                    <font>
+                        <Font name="FreeSans" size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="14.0" layoutY="152.0" prefHeight="46.0" prefWidth="70.0" text="Bucket Id">
+                    <font>
+                        <Font name="FreeSans" size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="14.0" layoutY="195.0" prefHeight="46.0" prefWidth="70.0" text="Time">
+                    <font>
+                        <Font name="FreeSans" size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="14.0" layoutY="237.0" prefHeight="46.0" prefWidth="70.0" text="Egg Qty">
+                    <font>
+                        <Font name="FreeSans" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblCageName" layoutX="125.0" layoutY="66.0" prefHeight="38.0" prefWidth="88.0" text="C001">
+                    <font>
+                        <Font name="FreeSans Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblEmployeeName" layoutX="125.0" layoutY="111.0" prefHeight="38.0" prefWidth="88.0" text="Ruki">
+                    <font>
+                        <Font name="FreeSans Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblBucketId" layoutX="125.0" layoutY="156.0" prefHeight="38.0" prefWidth="88.0" text="B001">
+                    <font>
+                        <Font name="FreeSans Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblTime" layoutX="125.0" layoutY="199.0" prefHeight="38.0" prefWidth="88.0" text="08:00:00">
+                    <font>
+                        <Font name="FreeSans Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblQty" layoutX="125.0" layoutY="241.0" prefHeight="38.0" prefWidth="88.0" text="156">
+                    <font>
+                        <Font name="FreeSans Bold" size="14.0" />
+                    </font>
+                </Label>
+            </children></AnchorPane>
+        <AnchorPane layoutX="925.0" layoutY="309.0" prefHeight="234.0" prefWidth="227.0" style="-fx-background-color: #F44336;">
+            <children>
+                <Label layoutX="28.0" layoutY="44.0" text="Total Egg For Today" textFill="WHITE">
+                    <font>
+                        <Font name="FreeSans Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblTotalForToday" layoutX="69.0" layoutY="119.0" text="560" textFill="WHITE">
+                    <font>
+                        <Font name="FreeSans Bold" size="48.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

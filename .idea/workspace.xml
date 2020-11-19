@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d9b38461-6e79-450f-aafe-7ee065a1066c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kSE95c5B0YhOtQobCf9O8xFqDS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/Jasper-lib" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager">
+    <configuration name="AppInitializer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lk.rangafarm.pos.AppInitializer" />
+      <module name="EggFarm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lk.rangafarm.pos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AppInitializer" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d9b38461-6e79-450f-aafe-7ee065a1066c" name="Default Changelist" comment="" />
+      <created>1605685439506</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605685439506</updated>
+      <workItem from="1605685454569" duration="872000" />
+      <workItem from="1605687055667" duration="1409000" />
+      <workItem from="1605688573535" duration="3142000" />
+      <workItem from="1605692417242" duration="580000" />
+      <workItem from="1605693077212" duration="1495000" />
+      <workItem from="1605703518448" duration="531000" />
+      <workItem from="1605762504368" duration="805000" />
+      <workItem from="1605763739877" duration="466000" />
+      <workItem from="1605764295016" duration="509000" />
+      <workItem from="1605764915408" duration="98000" />
+      <workItem from="1605766828720" duration="152000" />
+      <workItem from="1605768023436" duration="47000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1851" y="125" width="424" height="478" key="FileChooserDialogImpl" timestamp="1605764060844">
+      <screen x="1440" y="0" width="1366" height="768" />
+    </state>
+    <state x="411" y="120" width="424" height="478" key="FileChooserDialogImpl/0.0.1366.740@0.0.1366.740" timestamp="1605703726492" />
+    <state x="1851" y="125" width="637" height="505" key="FileChooserDialogImpl/1440.0.1366.768/0.0.1440.740@1440.0.1366.768" timestamp="1605764060844" />
+    <state width="1324" height="264" key="GridCell.Tab.0.bottom" timestamp="1605765013211">
+      <screen x="1440" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="210" key="GridCell.Tab.0.bottom/0.0.1366.740@0.0.1366.740" timestamp="1605704056281" />
+    <state width="1324" height="264" key="GridCell.Tab.0.bottom/1440.0.1366.768/0.0.1440.740@1440.0.1366.768" timestamp="1605765013211" />
+    <state width="1324" height="264" key="GridCell.Tab.0.center" timestamp="1605765013211">
+      <screen x="1440" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="210" key="GridCell.Tab.0.center/0.0.1366.740@0.0.1366.740" timestamp="1605704056278" />
+    <state width="1324" height="264" key="GridCell.Tab.0.center/1440.0.1366.768/0.0.1440.740@1440.0.1366.768" timestamp="1605765013211" />
+    <state width="1324" height="264" key="GridCell.Tab.0.left" timestamp="1605765013210">
+      <screen x="1440" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="210" key="GridCell.Tab.0.left/0.0.1366.740@0.0.1366.740" timestamp="1605704056278" />
+    <state width="1324" height="264" key="GridCell.Tab.0.left/1440.0.1366.768/0.0.1440.740@1440.0.1366.768" timestamp="1605765013210" />
+    <state width="1324" height="264" key="GridCell.Tab.0.right" timestamp="1605765013211">
+      <screen x="1440" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="210" key="GridCell.Tab.0.right/0.0.1366.740@0.0.1366.740" timestamp="1605704056279" />
+    <state width="1324" height="264" key="GridCell.Tab.0.right/1440.0.1366.768/0.0.1440.740@1440.0.1366.768" timestamp="1605765013211" />
+    <state x="1663" y="0" width="1024" height="724" key="SettingsEditor" timestamp="1605764126635">
+      <screen x="1440" y="0" width="1366" height="768" />
+    </state>
+    <state x="223" y="0" width="1024" height="724" key="SettingsEditor/0.0.1366.740@0.0.1366.740" timestamp="1605703849566" />
+    <state x="1663" y="0" width="1024" height="740" key="SettingsEditor/1440.0.1366.768/0.0.1440.740@1440.0.1366.768" timestamp="1605764126635" />
+    <state x="1539" y="96" width="1157" height="539" key="new project wizard" timestamp="1605687520092">
+      <screen x="1440" y="0" width="1366" height="768" />
+    </state>
+    <state x="1539" y="96" width="1157" height="539" key="new project wizard/1440.0.1366.768/0.0.1440.740@1440.0.1366.768" timestamp="1605687520092" />
+  </component>
+</project>
